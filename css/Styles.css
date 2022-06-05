@@ -1,0 +1,204 @@
+:root {
+  --primary: #013243;
+  --secondary: #32f5c8;
+  --light-grey: #a3b8c1;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; /* font size = 10px, So it's gonna be easier to convert into rem unit */
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--primary);
+  font-size: 1.8rem;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15rem;
+  max-width: 136.6rem;
+}
+
+.landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ************ AVATARS ************ */
+.avatars {
+  position: absolute;
+  z-index: -1;
+}
+
+.avatar-one {
+  top: 40%;
+  right: 7%;
+}
+.avatar-two {
+  top: 5%;
+  right: 10%;
+}
+.avatar-three {
+  top: 10%;
+  left: 3%;
+}
+.avatar-four {
+  bottom: 3%;
+  right: 20%;
+}
+.avatar-five {
+  top: 10%;
+  right: 35%;
+}
+
+/* ************ NAVBAR ************ */
+.brand {
+  padding: 3rem 0;
+}
+
+.brand a {
+  color: var(--secondary);
+}
+
+/* ************ LANDING-MAIN ************ */
+h1 {
+  color: var(--secondary);
+  font-size: clamp(2rem, 1rem + 10vw, 10rem);
+  letter-spacing: 0.4rem;
+  margin-bottom: 3rem;
+}
+
+p {
+  color: var(--light-grey);
+  max-width: 35rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+button {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 2rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* ************ SOCIAL-LINK ************ */
+.social-link {
+  margin: 6rem 0;
+}
+
+.social-link a {
+  color: var(--light-grey);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ************ RESPONSIVENESS ************ */
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 0 5rem;
+  }
+
+  .avatars.avatar-one {
+    top: 35%;
+    right: 7%;
+  }
+  .avatars.avatar-four {
+    bottom: 10%;
+    right: 15%;
+  }
+  .avatars.avatar-five {
+    top: 20%;
+    right: 35%;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1rem + 10vw, 8rem);
+  }
+}
+
+/* Mobiles */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .avatar-one,
+  .avatar-five {
+    display: none;
+  }
+  .avatar-two {
+    top: 8%;
+    right: 2%;
+  }
+  .avatar-four {
+    bottom: 10%;
+    right: 2%;
+  }
+  .avatar-four img {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1rem + 10vw, 6rem);
+  }
+}
+
+/* Small Devices/Mobiles */
+@media only screen and (max-width: 575px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .avatar-one,
+  .avatar-five {
+    display: none;
+  }
+  .avatar-two {
+    top: 8%;
+    right: 2%;
+  }
+  .avatar-four {
+    bottom: 10%;
+    right: 2%;
+  }
+  .avatar-four img {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 1rem + 7vw, 6rem);
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  .social-link {
+    margin: 5rem 0 3rem;
+  }
+}
